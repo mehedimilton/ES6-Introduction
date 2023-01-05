@@ -90,8 +90,8 @@
 
 //OBJECT LITERALS
 
-var name = 'Mehedi';
-var age = 23;
+// var name = 'Mehedi';
+// var age = 23;
 
 // var user = {
 //   name: name,//ES5
@@ -110,9 +110,45 @@ var age = 23;
 //   },
 // };
 
-let calculate = {
-  multiply(x, y) {
-    return x * y; //es6
-  },
+// let calculate = {
+//   multiply(x, y) {
+//     return x * y; //es6
+//   },
+// };
+// console.log(calculate.multiply(20, 3));
+
+//---------spread operator----------
+
+// var arr = [3, 4, 5];
+// var arr2 = [1, 2, ...arr, 6, 7];
+
+// console.log(arr2);
+
+// var array = [1, 2, 3, 4];
+// var array2 = [...array];
+// console.log(array2);
+
+// var arr = [1, 2, 3, 4];
+// var arr2 = [5, 6, 7];
+
+// arr = [...arr, ...arr2];
+// console.log(arr);
+
+// var num = [1, 2, 3, 4, 5];
+
+// function sum(a, b, c, d, e) {
+//   return a + b + c + d + e;
+// }
+// console.log(sum(...num));
+
+//---------REST OPERATOR----
+
+const test = (name, age, ...data) => {
+  console.log(`name:${name} age:${age}`);
+  let sum,
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i]);
+  }
+  // console.log(data);
 };
-console.log(calculate.multiply(20, 3));
+test('Mehedi', 34, 3, 55, 43, 2, 42);
