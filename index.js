@@ -143,12 +143,58 @@
 
 //---------REST OPERATOR----
 
-const test = (name, age, ...data) => {
-  console.log(`name:${name} age:${age}`);
-  let sum,
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
+// const test = (name, age, ...data) => {
+//   console.log(`name:${name} age:${age}`);
+
+//   for (let i = 0; i < data.length; i++) {
+//     console.log(data[i]);
+//   }
+//   // console.log(data);
+// };
+// test('Mehedi', 34, 3, 55, 43, 2, 42);
+
+function sum(...numbers) {
+  let total = 0;
+  for (const number of numbers) {
+    total += number;
   }
-  // console.log(data);
-};
-test('Mehedi', 34, 3, 55, 43, 2, 42);
+  return total;
+}
+sum(10, 20, 40);
+
+//-----------Destructuring-------------
+
+// let user = [555, 'Mehedi Hasan', 27];
+
+// // let id = user[0];
+// // let name = user[1];
+// // let age = user[2];
+// let [id, name, age] = user;
+// console.log(`Hi!..i am ${name} my id is ${id} and i am ${age} years old`);
+
+// let users = {
+//   ids: 2312,
+//   names: 'Morshed Jahan',
+//   ages: '21',
+//   address: {
+//     currentAddress: 'Dhaka',
+//     education: {
+//       SSC: 2013,
+//       HSC: 2015,
+//     },
+//   },
+// };
+
+// let {
+//   ids,
+//   names,
+//   ages,
+//   address: {
+//     currentAddress,
+//     education: { SSC, HSC },
+//   },
+// } = users;
+
+// console.log(
+//   `my brother id ${ids}  his name is ${names} and He is ${ages} years old and He lives in ${currentAddress} his education Qualification ssc pass in ${SSC} and hsc pass in ${HSC}`
+// );
