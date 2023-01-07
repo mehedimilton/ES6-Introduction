@@ -128,11 +128,11 @@
 // var array2 = [...array];
 // console.log(array2);
 
-// var arr = [1, 2, 3, 4];
+// var arr = [1, 2, 3, 4, 5, 6, 7];
 // var arr2 = [5, 6, 7];
 
-// arr = [...arr, ...arr2];
-// console.log(arr);
+// arr3 = [...new Set([...arr, ...arr2])];
+// console.log(arr3);
 
 // var num = [1, 2, 3, 4, 5];
 
@@ -153,23 +153,23 @@
 // };
 // test('Mehedi', 34, 3, 55, 43, 2, 42);
 
-function sum(...numbers) {
-  let total = 0;
-  for (const number of numbers) {
-    total += number;
-  }
-  return total;
-}
-sum(10, 20, 40);
+// function sum(...numbers) {
+//   let total = 0;
+//   for (const number of numbers) {
+//     total += number;
+//   }
+//   return total;
+// }
+// console.log(sum(10, 20, 40));
 
 //-----------Destructuring-------------
 
 // let user = [555, 'Mehedi Hasan', 27];
 
-// // let id = user[0];
-// // let name = user[1];
-// // let age = user[2];
-// let [id, name, age] = user;
+// let id = user[0];
+// let name = user[1];
+// let age = user[2];
+// // let [id, name, age] = user;
 // console.log(`Hi!..i am ${name} my id is ${id} and i am ${age} years old`);
 
 // let users = {
@@ -198,3 +198,21 @@ sum(10, 20, 40);
 // console.log(
 //   `my brother id ${ids}  his name is ${names} and He is ${ages} years old and He lives in ${currentAddress} his education Qualification ssc pass in ${SSC} and hsc pass in ${HSC}`
 // );
+
+//imediatly invoked function expression
+//Expession function
+// let test = (function (a, b) {
+//   console.log(a, b);
+// })(10, 5);
+
+//declaration function
+// (function tst() {
+//   console.log('Hello World');
+// })();
+
+// {
+//   let test = function () {
+//     console.log('Hello World!...');
+//   };
+//   test();
+// }
